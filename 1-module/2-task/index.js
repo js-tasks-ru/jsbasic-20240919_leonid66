@@ -2,14 +2,18 @@ function print(text) {
   console.log(text);
 }
 
-function isValid(userName) {
+function isValid(name) {
   // ваш код...
-if (userName != 0 && userName.length > 3  && !(userName.includes(' ') ) ) {
+if (name != null  && name.length > 3  && !(name.includes(' ') ) ) {
     return true;
-};
+  } else {
+    return false;
+  }
 }
 
+
 function sayHello() {
+
   let userName = prompt('Введите ваше имя');
 
   if (isValid(userName)) {
@@ -19,4 +23,4 @@ function sayHello() {
   }
 }
 
-sayHello();
+// sayHello();
