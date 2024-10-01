@@ -1,8 +1,8 @@
 let calculator = {
   // ваш код
-  read() {
-    calculator.a = +prompt('vvedi a', '0');
-    calculator.b = +prompt('vvedi b', '0');
+  read(a, b) {
+    this.a = a;
+    this.b = b;
 },
 
 sum() {
