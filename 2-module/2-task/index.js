@@ -4,5 +4,5 @@ function isEmpty(obj) {
     if (Object.keys(schedule).length !== 0) {
         return false;
     } ;
-    return true;
-}
+    return true
+};
