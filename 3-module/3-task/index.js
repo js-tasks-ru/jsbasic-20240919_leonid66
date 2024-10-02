@@ -23,7 +23,7 @@
 
 let result = zagl.join('')
 
-    console.log(result);
+    // console.log(result);
 
   };
   
