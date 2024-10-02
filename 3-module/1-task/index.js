@@ -3,6 +3,8 @@ function namify(users) {
   let usersNames = users.map((user) => {
     return user.name 
 });
+return usersNames
+
 }
 
 
