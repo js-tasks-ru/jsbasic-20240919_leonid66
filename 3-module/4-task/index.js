@@ -9,4 +9,4 @@ function showSalary(arr, age) {
 
 };
 
-let result = showSalary(users, age);
+// let result = showSalary(users, age);
