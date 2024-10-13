@@ -32,6 +32,47 @@ function highlight(table) {
   }
 
 
+  // Методы для работы с атрибутами:
+//   // elem.hasAttribute(name) – проверяет наличие атрибута.
+//   // elem.getAttribute(name) – получает значение атрибута.
+//   // elem.setAttribute(name, value) – устанавливает значение атрибута.
+//   // elem.removeAttribute(name) – удаляет атрибут.
+// elem.attributes – это коллекция всех атрибутов.
+// В большинстве ситуаций предпочтительнее использовать DOM-свойства. 
+// Нужно использовать атрибуты только тогда, когда DOM-свойства не подходят, 
+// когда нужны именно атрибуты, например:
+// Нужен нестандартный атрибут. Но если он начинается с data-, 
+// тогда нужно использовать dataset.
+// Мы хотим получить именно то значение, которое написано в HTML. 
+// Значение DOM-свойства может быть другим, например, 
+// свойство href – всегда полный URL, а нам может понадобиться 
+// получить «оригинальное» значение.
+
+
+
+// !DOCTYPE html>
+// <html>
+// <body>
+//   <div data-widget-name="menu">Choose the genre</div>
+//   <script>
+//     // получаем элемент
+//     let elem = document.querySelector('[data-widget-name]');
+//     // читаем значение
+//     alert(elem.dataset.widgetName);
+//     // или так
+//     alert(elem.getAttribute('data-widget-name'));
+//   </script>
+// </body>
+// </html>
+
+
+// // {/* <body something="non-standard">
+//   // <script>
+//     {/* alert(document.body.getAttribute('something')); // non-standard */}
+//   {/* </script> */}
+// // </body> */}
+
+
 
 //   // ваш код...
 // for (let tr of table) {
