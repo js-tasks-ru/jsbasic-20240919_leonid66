@@ -32,6 +32,66 @@ function highlight(table) {
   }
 
 
+
+
+
+
+  // function highlight(table) {
+
+  //   for (let i = 0; i < table.rows.length; i++) {
+  //     let row = table.rows[i];
+  
+  //     if (row.cells[3].dataset.available === "true") {
+  //       row.classList.add("available");
+  //     } else if (row.cells[3].dataset.available === "false"){
+  //       row.classList.add("unavailable");
+  //     }
+  
+  //     if (!row.cells[3].dataset.available) {
+  //       row.setAttribute("hidden", true);
+  //     }
+  
+  //     if (row.cells[2].textContent === "m") {
+  //       row.classList.add("male");
+  //     } else if (row.cells[2].textContent === "f"){
+  //       row.classList.add("female");
+  //     }
+  
+  //     if (parseInt(row.cells[1].textContent) < 18) {
+  //       row.style.textDecoration = "line-through";
+  //     }
+  //   }
+  // }
+
+
+
+
+
+
+  // let links = document.querySelectorAll('a');
+
+  // for (let link of links) {
+  //   let href = link.getAttribute('href');
+  //   if (!href) continue; // нет атрибута
+  
+  //   if (!href.includes('://')) continue; // нет протокола
+  
+  //   if (href.startsWith('http://internal.com')) continue; // внутренняя
+  
+  //   link.style.color = 'orange';
+  // }
+  // Пожалуйста, обратите внимание: мы используем link.getAttribute('href'). Не link.href, потому что нам нужно значение из HTML.
+  
+  // …Другой, более простой путь – добавить проверку в CSS-селектор:
+  
+  // // найти все ссылки, атрибут href у которых содержит ://
+  // // и при этом href не начинается с http://internal.com
+  // let selector = 'a[href*="://"]:not([href^="http://internal.com"])';
+  // let links = document.querySelectorAll(selector);
+  
+  // links.forEach(link => link.style.color = 'orange');
+
+
   // Методы для работы с атрибутами:
 //   // elem.hasAttribute(name) – проверяет наличие атрибута.
 //   // elem.getAttribute(name) – получает значение атрибута.
@@ -99,5 +159,8 @@ function highlight(table) {
 //   // td.classList.contains('red');
 
 // }
+
+
+
 
 
