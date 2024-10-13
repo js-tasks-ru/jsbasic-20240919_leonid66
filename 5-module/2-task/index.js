@@ -11,4 +11,4 @@ function toggleText() {
         //    // textToHide.hidden = true;   /*  'эта прячет'  */ 
         //    textToHide.classList.toggle('hidden');
         }
-};ы
+};
