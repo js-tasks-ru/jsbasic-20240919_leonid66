@@ -5,8 +5,10 @@ function toggleText() {
 
       btn.onclick = btnHideText;
         function btnHideText() {
-           textToHide.classList.add('hidden');
-           // textToHide.hidden = true;   /*  'эта прячет'  */ 
-           textToHide.classList.toggle('hidden');
+          textToHide.hidden = !textToHide.hidden  /* это не то */
+
+        //    textToHide.classList.add('hidden');
+        //    // textToHide.hidden = true;   /*  'эта прячет'  */ 
+        //    textToHide.classList.toggle('hidden');
         }
-};
+};ы
