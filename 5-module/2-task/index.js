@@ -6,5 +6,6 @@ function toggleText() {
       btn.onclick = btnHideText;
         function btnHideText() {
           textToHide.toggleAttribute('hidden');
+          
         }
 };
