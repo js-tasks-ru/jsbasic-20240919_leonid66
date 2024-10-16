@@ -1,8 +1,3 @@
 function initCarousel() {
   // ваш код...
 
-
-
-
-  
-}
