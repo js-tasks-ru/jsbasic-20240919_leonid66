@@ -22,3 +22,4 @@ return result;
 };
 
 // console.log(getMinMax(inputData))
+
