@@ -10,3 +10,4 @@ function showSalary(arr, age) {
 };
 
 // let result = showSalary(users, age);
+

@@ -25,3 +25,4 @@ return usersNames
 // }
 
 // let names = namify(users); // ['Вася', 'Петя', 'Маша']
+

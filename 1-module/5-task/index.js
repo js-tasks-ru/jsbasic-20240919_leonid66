@@ -12,3 +12,4 @@ if (str.length > maxlength) {
 };
 
 // truncate( str, maxlength );
+

@@ -9,4 +9,3 @@ function ucFirst( str ) {
     return( res );
     };
 };
-

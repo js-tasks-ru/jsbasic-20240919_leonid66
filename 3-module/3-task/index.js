@@ -12,3 +12,4 @@ function camelize(str) {
 
 return zagl.join('');  
 }
+
