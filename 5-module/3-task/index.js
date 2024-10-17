@@ -1,3 +1,4 @@
+
 function initCarousel() {
   // ваш код...
     let arrowR = document.querySelector('.carousel__arrow_right');
