@@ -31,5 +31,5 @@ function initCarousel() {
       };
       slidesInner.style.transform = `translateX(${ - ( slideWidth * --position ) + 'px'})`;
   });
- 
+  
 };
