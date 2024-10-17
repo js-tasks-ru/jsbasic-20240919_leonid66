@@ -13,11 +13,7 @@ function initCarousel() {
       if ( position > slides.length-2 ) { position = slides.length-2 };
       if ( position === slides.length-2 ) {
         arrowR.style.display = 'none';
-        arrowL.style.display = '';
-      } else {
-        arrowR.style.display = '';
-        arrowL.style.display = '';
-      };
+      } else {arrowL.style.display = '' };
       slidesInner.style.transform = `translateX(${ - ( slideWidth * ++position ) + 'px'})`;
   });
   
@@ -25,11 +21,7 @@ function initCarousel() {
       if ( position < 1 ) { position = 1 };
       if ( position === 1 ) {
         arrowL.style.display = 'none';
-        arrowR.style.display = '';
-      } else {
-        arrowR.style.display = '';
-        arrowL.style.display = '';
-      };
+      } else { arrowR.style.display = '' };
       slidesInner.style.transform = `translateX(${ - ( slideWidth * --position ) + 'px'})`;
   });
   
