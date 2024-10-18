@@ -20,8 +20,7 @@ export default class UserTable {
                 </thead> `
           );
 
-          this.elem.insertAdjacentHTML(      /*   insert tbody */
-            'beforeEnd',
+          this.elem.insertAdjacentHTML('beforeEnd',      /*   insert tbody */
             this.rows.map( ( { name, age, salary, city } ) => 
               ` <tbody>
                       <tr>
