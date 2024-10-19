@@ -1,3 +1,4 @@
+
 // import createElement from '../../assets/lib/create-element.js';    /*  что значит? на пальцах? */
 
 export default class ProductCard {
@@ -46,3 +47,4 @@ export default class ProductCard {
   };     /*   end of onClick */
 
 };
+
