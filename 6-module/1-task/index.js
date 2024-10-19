@@ -1,7 +1,6 @@
 export default class UserTable {
       constructor(rows) {
         this.rows = rows; 
-          // console.log(rows)
         this.render();
       };       /*    end of constructor    */
 
@@ -21,7 +20,7 @@ export default class UserTable {
           );
 
           this.elem.insertAdjacentHTML('beforeEnd',      /*   insert tbody */
-            this.rows.map( ( { name, age, salary, city } ) => 
+            this.rows.map( ( { name, age, salary, city }, ) => 
               ` <tbody>
                       <tr>
                           <td> ${name} </td>
@@ -31,7 +30,7 @@ export default class UserTable {
                           <td id = 'btnX' > <button> X </button> </td>
                       </tr>
                   </tbody> `
-              )
+              ) .join('')      /*    можно ли очевиднее? */
           );
 
         this.elem.addEventListener('click', this.onClick);

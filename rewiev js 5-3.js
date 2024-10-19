@@ -5,6 +5,7 @@
 
 
 - откуда взялась запятая в списке ноовоостей в начале 5 семинара?
+При переводе массива объектов в строку? как убрать? join('') куда? или  доп аргумент ('') куда засунуть? почему именноо туда?
 - этот метод дает запятую и при выводе других элементов!!!
 
 Критерии:
@@ -50,47 +51,42 @@
 
 
 // // ==========================================================
-// // 2 strelki  + функция по кругу  // 
+// // 2 strelki  //  
+// https://github.com/js-tasks-ru/jsbasic-20240919_lblkmlk/blob/master/5-module/3-task/index.js
 // function initCarousel() {
-//   const arrowRight = document.querySelector('.carousel__arrow_right');
-//   const arrowLeft = document.querySelector('.carousel__arrow_left');
-//   const slides = document.querySelectorAll('.carousel__slide');
-//   const carouselInner = document.querySelector('.carousel__inner');
-//   const arrowParentNode = document.querySelector('.carousel');
-//   const slideCount = slides.length;
-//   const slideWidth = slides[0].offsetWidth;
+//   const leftArrow = document.getElementsByClassName('carousel__arrow_left')[0];
+//   const rightArrow = document.getElementsByClassName('carousel__arrow_right')[0];
+//   const tape = document.getElementsByClassName('carousel__inner')[0];
+//   const updateArrows = () => {
+//     leftArrow.style.display = '';
+//     rightArrow.style.display = '';
 
-//   let currentSlide = 0;
-
-//   function buttonArrows() {
-//     arrowLeft.style.display = currentSlide === 0 ? 'none' : '';
-//     arrowRight.style.display = currentSlide === slideCount - 1 ? 'none' : '';
+//     if (posIndex === 0) {
+//       leftArrow.style.display = 'none';
+//     }
+//     else if (posIndex === 3) {
+//       rightArrow.style.display = 'none';
+//     }
 //   }
-//   buttonArrows();
 
-//   arrowParentNode.addEventListener('click', ({ target }) => {
-//     let arrow1 = target.closest('.carousel__arrow');
+//   let posIndex = 0;
 
-//     if (arrow1 === arrowRight) {
-//       if (currentSlide < slideCount - 1) {
-//         currentSlide++;
-//         carouselInner.style.transform = `translateX(-${slideWidth * currentSlide}px)`;
-//         buttonArrows()
-//       }
-//     }
+//   updateArrows();
 
-//     if (arrow1 === arrowLeft) {
-//       if (currentSlide > 0) {
-//         currentSlide--;
-//         carouselInner.style.transform = `translateX(-${slideWidth * currentSlide}px)`;
-//         buttonArrows()
-//       }
-//     }
-//   })
+//   leftArrow.onclick = () => {
+//     posIndex--;
+//     tape.style.transform = `translateX(${posIndex * -tape.offsetWidth}px)`;
+//     updateArrows();
+//   };
+//   rightArrow.onclick = () => {
+//     posIndex++;
+//     tape.style.transform = `translateX(${posIndex * -tape.offsetWidth}px)`;
+//     updateArrows();
+//   };
+
 // }
 // // ==========================================================
-// // 2 strelki  + функция по кругу // 
-
+// // 2 strelki  //
 
 
 
@@ -132,6 +128,7 @@
 
 // // ==========================================================
 // // 4 strelki DRUGIE  //    работает????
+// https://github.com/js-tasks-ru/jsbasic-20240919_ilyab/blob/master/5-module/3-task/index.js
 // function initCarousel() {
 //   let switchTool = document.querySelector(".carousel__inner");
 //   let arrowright = document.querySelector(".carousel__arrow_right");
@@ -175,6 +172,7 @@
 
 // // ==========================================================
 // // 5 strelki + func(видимостьь стрелок)  // 
+// https://github.com/js-tasks-ru/jsbasic-20240919_helen2/blob/master/5-module/3-task/index.js
 // function initCarousel() {
 //   let carouselInner = document.querySelector('.carousel__inner');
 //   let carouselArrows = document.querySelectorAll('.carousel__arrow');
@@ -226,6 +224,8 @@
 
 // // ==========================================================
 // // 6 ? + func btn strelki  //      (дклкгирование??????)
+// https://github.com/js-tasks-ru/jsbasic-20240919_vladimir409/blob/master/5-module/3-task/index.js
+
 // function initCarousel() {
 //   const arrowRight = document.querySelector('.carousel__arrow_right');
 //   const arrowLeft = document.querySelector('.carousel__arrow_left');
@@ -274,6 +274,7 @@
 
 // // ==========================================================
 // // 7 func btn + strelki + обращение к функции (какая схема рабты функции апдэйт?) //  (делегирование?)
+// https://github.com/js-tasks-ru/jsbasic-20240919_art-dvornikovv/blob/master/5-module/3-task/index.js
 // function initCarousel() {
 //   const carousel = document.querySelector(".carousel");
 //   const carouselInner = carousel.querySelector(".carousel__inner");
@@ -327,6 +328,7 @@
 
 // // ==========================================================
 // // 8 toggle  // 
+// https://github.com/js-tasks-ru/jsbasic-20240919_anastasiya869/blob/master/5-module/3-task/index.js
 // function initCarousel() {
 //   let carouselInner = document.querySelector('.carousel__inner')
 //   let slideWidth = carouselInner.offsetWidth
@@ -368,6 +370,7 @@
 
 // // ==========================================================
 // // 9 swith + ?  // (делегирование?)
+// https://github.com/js-tasks-ru/jsbasic-20240919_shmigelskiyandrey/blob/master/5-module/3-task/index.js
 // function initCarousel() {
 //   const carouselContainer = document.querySelector('.carousel');
 //   const carousel = document.querySelector('.carousel__inner');
@@ -406,6 +409,7 @@
 
 // // ==========================================================
 // // 10 click + func  //  (длегироование?)
+// https://github.com/js-tasks-ru/jsbasic-20240919_anton-plahovv/blob/master/5-module/3-task/index.js
 // function initCarousel() {
 //   // 0. создаем переменную, в которой храним текущий слайд
 //   let numSlides = 0;
@@ -450,6 +454,7 @@
 
 // // ==========================================================
 // // 11 не уверен работает ли это решение //  (делегирование?)
+// https://github.com/js-tasks-ru/jsbasic-20240919_ruslangaliev94/blob/master/5-module/3-task/index.js
 // function initCarousel() {
 
 // 	let arowLeft = document.querySelector('.carousel__arrow_left');
