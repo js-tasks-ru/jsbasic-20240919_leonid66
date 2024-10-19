@@ -1,7 +1,6 @@
 // import createElement from '../../assets/lib/create-element.js';    /*  что значит? на пальцах? */
 
 export default class ProductCard {
-<<<<<<< HEAD
   constructor(product) {
     this.product = product;
     this.render();
