@@ -89,7 +89,7 @@ onClick() {
               // console.log('bt: ', bt);
               // console.log('bt id: ', bt.closest('.carousel__slide').dataset.id);
             let slideid = bt.closest('.carousel__slide').dataset.id;
-              console.log('slideid: ', slideid);
+              // console.log('slideid: ', slideid);
 
           let btnAdd = new CustomEvent("product-add", {
             // detail: this.slides.id,  /*   хоть один ид передает */
