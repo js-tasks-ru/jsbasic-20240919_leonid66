@@ -25,7 +25,7 @@ render() {
         ${
           this.slides.map( ( slide ) => 
             `
-            <div class="carousel__slide" data-id=${slide.id}">
+            <div class="carousel__slide" data-id="${slide.id}">
               <img src="/assets/images/carousel/${slide.image}" class="carousel__img" alt="slide">
                 <div class="carousel__caption">
                     <span class="carousel__price">€${slide.price.toFixed(2)}</span>
@@ -89,7 +89,7 @@ onClick() {
               // console.log('bt: ', bt);
               // console.log('bt id: ', bt.closest('.carousel__slide').dataset.id);
             let slideid = bt.closest('.carousel__slide').dataset.id;
-              // console.log('slideid: ', slideid);
+              console.log('slideid: ', slideid);
 
           let btnAdd = new CustomEvent("product-add", {
             // detail: this.slides.id,  /*   хоть один ид передает */
