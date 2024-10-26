@@ -1,4 +1,3 @@
-// let str = prompt ( 'vvedi' , '' );
 
 function checkSpam ( str ) {
     let text = str.toLowerCase();

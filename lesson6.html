@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS</title>
+</head>
+<body>
+
+<script>
+let data = [
+  {
+    id: 1,
+    title: "news 1"
+  },
+  {
+    id: 2,
+    title: "news 2"
+  },
+  {
+    id: 3,
+    title: "news 3"
+  },
+  {
+    id: 4,
+    title: "news 4"
+  },
+];
+
+function NewsFunc(newsData, color = '#000') {
+  let list = document.createElement('ul');
+  list.insertAdjacentHTML('beforeEnd', newsData.map(({id, title}) => `<li data-id="${id}" style="color: ${color}">${title}</li>`) );
+return list;
+};
+
+// let  newsFuncComponent = NewsFunc(data);
+document.body.append(newsFuncComponent)
+document.body.append(NewsFunc(data, 'red'))
+</script>
+
+
+
+<!-- 
+
+<script>
+  let data = [
+    {
+      id: 1,
+      title: 'Новость 1',
+    },
+    {
+      id: 2,
+      title: 'Новость 2',
+    },
+    {
+      id: 3,
+      title: 'Новость 3',
+    },
+  ]; -->
+
+<!-- 
+  function NewsFunc(newsData, color = '#000') {
+    let list = document.createElement('UL');
+    list.insertAdjacentHTML('beforeEnd', newsData.map(({ id, title }) => `<li data-id="${id}" style="color: ${color}">${title}</li>`));
+    return list;  
+  } -->
+
+<!-- 
+  // let newsFunComponent = NewsFunc(data);
+  // document.body.append( newsFunComponent );
+  // document.body.append( NewsFunc(data, 'red') );
+</script> -->
+
+
+<script>
+  class News {
+    constructor (newsData) {
+      this.newsData = newsData
+// this.a = num;
+// this.b = 2;
+    }
+
+    render () {
+      this.elem = document.createElement('ul');
+      this.elem.insertAdjacentHTML(
+        'beforeEnd', 
+        this.newsData.map(({id, title}) => `<li data-id="${id}">${title}</li>`) );
+    };
+    return this.elem;
+  }
+  
+// test() {
+// console.log('this.a', this.a);
+// }
+
+let newsComponent = new News(data);
+// let newsComponent2 = new News(7);
+
+console.log('newsComponent: ', newsComponent)
+// console.log('newsComponent2: ', newsComponent2)
+// newsComponent.test();
+// newsComponent2.test();
+
+</script>
+
+<!-- 
+<script>
+  class News {
+    constructor(newsData) {
+      this.newsData = newsData;
+      this.render();
+    } -->
+
+
+<!-- 
+    render() {
+      this.elem = document.createElement('UL');
+
+      this.elem.insertAdjacentHTML(
+        'beforeEnd',
+        this.newsData.map(({ id, title }) => `<li data-id="${id}">${title}</li>`)
+      );
+
+      this.elem.addEventListener('click', this.onClick);
+
+      return this.elem;
+    }
+
+    onClick(ev) {
+      let li = ev.target.closest('li');
+
+      if (li) {
+        li.style.textDecoration = 'line-through';
+      }
+    }
+  }
+
+  let newsComponent = new News(data);
+
+
+  document.body.append( newsComponent.elem ); -->
+
+
+
+<!-- </script> -->
+<!-- 
+<script>
+  
+  class User {
+    constructor(firstName, lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+    }
+
+    read() {
+      console.log(this.firstName, this.lastName, 'может читать новости');
+    }
+  }
+  let user = new User('Филипп', 'Киркоров');
+  user.read();
+
+
+
+  class Moderator extends User {
+    edit() {
+      console.log(this.firstName, this.lastName, 'может редактировать новости');
+    }
+  }
+  let moderator = new Moderator('Максим', 'Галкин');
+  moderator.read();
+  moderator.edit();
+
+
+
+  class Admin extends Moderator {
+    all() {
+      console.log(this.firstName, this.lastName, 'может всё');
+    }
+  }
+  let admin = new Admin('Алла', 'Пугачёва');
+  admin.read();
+  admin.edit();
+  admin.all();
+</script> -->
+
+
+
+
+
+<!-- 
+
+<script>
+
+  class CoffeeMachine {
+    #power;
+
+    constructor(power, waterAmount) {
+      this.power = power;
+      this.waterAmount = waterAmount;
+      this.render();
+    }
+
+    set power(value) {
+      if (value > 3000) {
+        value = 3000;
+      } else if (value < 500) {
+        value = 500;
+      }
+
+      this.#power = value;
+    }
+
+    get power() {
+      return `Мощность кофемашины: ${this.#power}Вт`;
+    }
+
+    #start = () => {
+      console.log('Кофе будет готов через', this.waterAmount / this.#power * 1000, 'мин');
+
+      setTimeout(() => {
+        let ce = new CustomEvent('coffee', { bubbles: true });
+        this.elem.dispatchEvent(ce);
+      }, this.waterAmount / this.#power * 1000 * 1000);
+    }
+
+    render() {
+      this.elem = document.createElement('BUTTON');
+      this.elem.textContent = 'СВАРИТЬ КОФЕ';
+      this.elem.onclick = this.#start;
+    }
+  }
+
+
+  let coffeeMachine = new CoffeeMachine(3000, 3);
+  console.log( coffeeMachine.power );
+
+  coffeeMachine.power = 1000;
+  console.log( coffeeMachine.power );
+
+  document.body.append( coffeeMachine.elem );
+
+
+  coffeeMachine.elem.addEventListener('coffee', () => {
+    alert('КОФЕ ГОТОВ!');
+  });
+</script> -->
+
+<!-- 
+<button class="btn1" data-product="Бананы">Добавить в корзину: Бананы</button>
+
+<script>
+  let btn1 = document.querySelector('.btn1');
+
+  btn1.addEventListener('click', ev => {
+    let ce = new CustomEvent('product-add', {
+      bubbles: true,
+      detail: btn1.dataset.product,
+    });
+
+    btn1.dispatchEvent(ce);
+  });
+
+  btn1.addEventListener('product-add', (ev) => {
+    console.log('Товар добавлен в корзину:', ev.detail);
+  });
+</script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

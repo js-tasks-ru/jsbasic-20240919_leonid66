@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS.4</title>
+</head>
+<body>
+
+  <a> text v body </a>
+
+  <h1 id = "zagol">UR4. Zagolovok h1</h1>
+
+  
+  <span>napisal so span stilizovat`</span> <!-- стилизовать после с css -->
+  
+  <script> 
+    // console.log('document: ', document);
+    // console.dir(document);
+    console.log(document.body.children);
+    // console.log(document.body.childNodes);
+
+    // let h1 = document.body.children[0];
+    let h1Zagol = document.getElementById('zagol');
+
+    console.log('h1Zagol', h1Zagol);
+
+    h1Zagol.style.color = 'red';
+
+  </script>
+
+
+
+  <ul class = "list"> </ul>
+    <li class= "list-item">hleb</li>
+    <li class= "list-item">mmilk</li>
+    <li class= "list-item">tea</li>
+    <li class= "list-item">water</li>
+
+<script>
+  let listItems = document.getElementsByClassName('list-item');
+
+  console.log("list-items", listItems);
+
+  // listItems.style.color = 'red'; /* не работает тк массив */
+
+  for (let item of listItems) {
+  item.style.color = 'blue'; /* item - eto li */
+  };
+  
+</script>
+<p> </p>
+
+
+<button class = btn>BTNBTNBTN1</button>
+<button class = btn>BTNBTNBTN2</button>
+<button class = btn>BTNBTNBTN3</button>
+<button class = btn>BTNBTNBTN4</button>
+
+
+<script>
+
+
+  let firstBtn = document.querySelector('.btn');
+  console.log(firstBtn.tagName);
+
+
+    firstBtn.style.color = 'blue';
+    firstBtn.style.backgroundColor = 'yellow';
+
+    let allBtn = document.querySelectorAll('.btn');
+      console.log('allBtn', allBtn);
+
+      for (let btn of allBtn) {
+        btn.style.color = 'green'; 
+        btn.style.backgroundColor = 'yellow'; 
+      };
+
+</script>
+<p> </p>
+<a id = 'yaLink' href="https://ya.ru">yandex</a>
+<p></p>
+<img id = 'image'  src="https://avatars.mds.yandex.net/i?id=2528a554934f4864aed3f70ff6690c4f21c6c16e-5864121-images-thumbs&n=13" alt="" height = '150'>
+<p></p>
+
+<script>
+  let yaLink = document.getElementById('yaLink');
+  yaLink.id = 'googleLink';
+  yaLink.href = 'https://google.com';
+
+  let img = document.querySelector('image');
+</script>
+
+
+
+<style>
+  .advert {
+    width: 450px;
+    height: 100px;
+    line-height: 100px;
+    background-color: #ff0;
+    text-align: center;
+    border: 5px dashed red;
+    font-size: 60px;
+  }
+</style>
+
+
+<div class = 'advert' hidden >    <!-- домашка -->
+  RECLAMA
+</div>
+
+<script>
+  let advert = document.querySelector('.advert');
+  // advert.hidden = true;
+  advert.hidden = false;
+</script>
+
+
+<ul class = 'phones'>
+  <li data-price = '100'>
+    iphone effdw233
+  </li>
+  <li data-price = '80'>
+    samsung fwsd232
+  </li>
+  <li data-price = '50'>
+    nokia 3311
+  </li>
+</ul>
+
+<script>
+  let phones = document.querySelectorAll('.phones li');
+
+  for (let phoneLi of phones) {
+    console.log('price', phoneLi.dataset.price)
+  }
+
+</script>
+
+
+
+
+<style>
+  .large {
+    font-size: 60px;
+  }
+
+  .red {
+    color: red;
+  }
+
+</style>
+
+<!-- <p class = 'large red'>
+  some text
+</p> -->
+
+<p id = 'someText'>
+  some text
+</p>
+
+<script>
+let someText = document.getElementById('someText');
+
+// someText.className = 'large red';
+
+// someText.className = 'large';
+// someText.className += ' red';
+
+someText.classList.add('large');
+someText.classList.add('red');
+
+someText.classList.remove('red');
+
+someText.classList.toggle('red'); /* туда-сюда */
+
+someText.classList.contains('red'); /* проверка  возвращает булевое значение */
+
+</script>
+
+
+<!-- создание элементов-->
+
+<ul class = 'prod'>
+  <li class = prod-item>morkov</li>
+  <li class = prod-item>luk</li>
+  <li class = prod-item>potato</li>
+</ul>
+
+<script>
+  let prod = document.querySelector('.prod');
+  let newProd = document.createElement('LI');
+  // newProd.textContent = 'pepper'; /* ILI */
+  newProd.innerHTML = 'pepper'; /* ili      PARSIT STROKU */
+  prod.append(newProd);
+
+
+  prod.insertAdjacentHTML('beforeEnd', '<li class = "prod-item">kabage<li>');
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

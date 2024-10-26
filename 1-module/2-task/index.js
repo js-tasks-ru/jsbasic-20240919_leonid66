@@ -13,7 +13,6 @@ if (name != null  && name.length > 3  && !(name.includes(' ') ) ) {
 
 
 function sayHello() {
-
   let userName = prompt('Введите ваше имя');
 
   if (isValid(userName)) {
@@ -24,3 +23,4 @@ function sayHello() {
 }
 
 // sayHello();
+
